@@ -43,10 +43,10 @@ func main() {
 	singleNumber([]int{1, 2, 3, 2, 1, 3, 5})
 
 	//回文数
-	fmt.Println(isPalindrome(123))
-	fmt.Println(isPalindrome(-121))
-	fmt.Println(isPalindrome(1538351))
-	fmt.Println(isPalindrome(1234321))
+	//fmt.Println(isPalindrome(123))
+	//fmt.Println(isPalindrome(-121))
+	//fmt.Println(isPalindrome(1538351))
+	//fmt.Println(isPalindrome(1234321))
 
 	//有效的括号
 	//fmt.Println(isEffectiveParentheses("{([])}([])"))
