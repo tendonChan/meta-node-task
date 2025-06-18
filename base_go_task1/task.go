@@ -1,4 +1,4 @@
-package main
+package base_go_task1
 
 import (
 	"fmt"
@@ -37,7 +37,7 @@ func (s *Stack) Pop() interface{} {
 	return element
 }
 
-func main() {
+func Run() {
 	//136. 只出现一次的数字
 	singleNumber([]int{4, 1, 2, 1, 3, 4, 2, 3, 0})
 	singleNumber([]int{1, 2, 3, 2, 1, 3, 5})
