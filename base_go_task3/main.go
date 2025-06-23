@@ -1,13 +1,13 @@
-package base_go_task3
+package main
 
 import (
+	"base_go_task3/advancegorm"
+	sqlx2 "base_go_task3/sqlx"
 	"fmt"
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
-	"metaNodeTask/base_go_task3/advancegorm"
-	sqlx2 "metaNodeTask/base_go_task3/sqlx"
 )
 
 func initDb() (db *gorm.DB, err error) {
@@ -178,7 +178,7 @@ func gorm1Test() {
 
 }
 
-func Run() {
+func main() {
 	//基本CRUD操作  地址：sqlbase/crud.sql,sqlbase/transaction.sql
 
 	//Sqlx入门 -> 使用SQL扩展库进行查询

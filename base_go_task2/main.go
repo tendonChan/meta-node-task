@@ -1,12 +1,12 @@
-package base_go_task2
+package main
 
 import (
+	"base_go_task2/channel"
+	"base_go_task2/goroutine"
+	"base_go_task2/object_oriented"
+	"base_go_task2/pointer"
 	"fmt"
 	"math/rand"
-	"metaNodeTask/base_go_task2/channel"
-	"metaNodeTask/base_go_task2/goroutine"
-	"metaNodeTask/base_go_task2/object_oriented"
-	"metaNodeTask/base_go_task2/pointer"
 	"sync"
 	"sync/atomic"
 	"time"
@@ -157,7 +157,7 @@ func mutex2Test() {
 	fmt.Println(counter)
 }
 
-func Run() {
+func main() {
 	//指针 -> 1题：编写一个Go程序，定义一个函数，该函数接收一个整数指针作为参数，在函数内部将该指针指向的值增加10，然后在主函数中调用该函数并输出修改后的值。
 	//pointer1Test()
 	//////指针 -> 2题：实现一个函数，接收一个整数切片的指针，将切片中的每个元素乘以2。
