@@ -6,6 +6,6 @@ import {ERC20Permit} from "@openzeppelin/contracts/token/ERC20/extensions/ERC20P
 
 contract MyToken is ERC20, ERC20Permit {
     constructor() ERC20("MyToken", "MTK") ERC20Permit("MyToken") {
-        _mint(msg.sender, 100 * 10 ** 18);
+        _mint(msg.sender, 10000 * 10 ** 18);
     } 
 }

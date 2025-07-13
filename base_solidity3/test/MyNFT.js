@@ -46,9 +46,7 @@ describe("MyNFT", function () {
         await myNFTContract.connect(deployer).mint(user1.address, tokenId);
         expect(await myNFTContract.balanceOf(user1.address)).to.equal(1);
         
-        await myNFTContract.connect(user1).safeTransferFrom(user1.address, await myNFTContract.getAddress(), tokenId);
+        await myNFTContract.connect(user1).safeTransferFrom(user1.address, user2.address, tokenId);
         expect(await myNFTContract.balanceOf(user2.address)).to.equal(1);
-        // expect(await myNFTContract.connect(user1).safeTransferFrom(user1.address, user2.address, tokenId)).to.be.
-        // revertedWith("ERC721: transfer caller is not owner nor approved");
     });
 });
