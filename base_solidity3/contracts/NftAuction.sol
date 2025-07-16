@@ -3,10 +3,10 @@ pragma solidity ^0.8;
 import "@openzeppelin/contracts/token/ERC721/IERC721.sol";
 import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol";
+import "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol";
 import {AggregatorV3Interface} from "@chainlink/contracts/src/v0.8/shared/interfaces/AggregatorV3Interface.sol";
 
-contract NftAuction is Initializable {
+contract NftAuction is OwnableUpgradeable {
     address public seller;
     uint256 public duration;
     uint256 public startPrice;
@@ -48,10 +48,9 @@ contract NftAuction is Initializable {
         address tokenAddress
     );
 
-    function init() public  initializer{}
-
     // Initialize the auction with parameters
-    function initialize(address seller_,uint256 startTime_,uint duration_,uint256 startPrice_,address startPriceTokenAddress_,address nftContractAddress_,uint256 tokenId_) public {
+    function initialize(address seller_,uint256 startTime_,uint duration_,uint256 startPrice_,address startPriceTokenAddress_,address nftContractAddress_,uint256 tokenId_) public initializer{
+        __Ownable_init();
         require(seller_ != address(0), "Invalid seller address");
         require(startTime_ > block.timestamp, "Start time must be in the future");
         require(duration_ > 0, "Duration must be greater than zero");

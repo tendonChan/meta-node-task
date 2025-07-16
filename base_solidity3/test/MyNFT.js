@@ -7,7 +7,7 @@ describe("MyNFT", function () {
     this.beforeEach(async function () {
         [deployer, user1, user2,user3] = await ethers.getSigners();
         const MyNFT = await ethers.getContractFactory("MyNFT");
-        myNFTContract = await MyNFT.deploy();
+        myNFTContract = await MyNFT.deploy("MyNFT", "MNFT");
     });
 
     it("Should have the correct name and symbol", async function () {

@@ -7,7 +7,7 @@ describe("MyToken",function () {
     this.beforeEach(async function () {
         [deployer,user1,user2] = await ethers.getSigners();
         const MyToken = await ethers.getContractFactory("MyToken");
-        myTokenContract = await MyToken.deploy();
+        myTokenContract = await MyToken.deploy("MyToken", "MTK", ethers.parseUnits("10000", 18));
     });
 
     it("Should have the correct name and symbol", async function () {
