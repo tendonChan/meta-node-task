@@ -13,7 +13,8 @@ module.exports = async ({ getNamedAccounts, deployments }) => {
   // await eth2UsdContract.waitForDeployment();
   // const usdc2UsdContract = await MockAggregatorV3.deploy(usdcInitAnswer, 8);
   // await usdc2UsdContract.waitForDeployment();
-
+ 
+  
   // 部署NFT合约
   const MyNFT = await ethers.getContractFactory("MyNFT");
   const myNFTContract = await MyNFT.deploy("MyNFT", "MNFT");
